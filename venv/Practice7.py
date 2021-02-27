@@ -33,4 +33,5 @@ for i in range(len(Drivers)):
     print("Driver Found",Drivers[i]["name"])
 
     print("Dear", Customers["name"],"your cab is booked: SMS send on", Customers["phone"])
+    print("Dear", Customers["name"], "your cab is booked: Email send on", Customers["email"])
     break
