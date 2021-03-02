@@ -18,8 +18,11 @@ image= [
     [pixel7,pixel8,pixel9]
 ]
 
-for i in image:
-    for j in i:
-        j= sum(j)//3
-            
+for pixels in image:
+    for pixel in pixels:
+        pixel = sum(pixel)//3
+        for x in range(len(image)):
+            pixel[x]=
+
+
 
