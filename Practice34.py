@@ -9,11 +9,11 @@ def main():
     deceased = int(input("Enter deceased Cases: "))
     tested = int(input("Enter tested Cases: "))
 
-    sql = "insert into covidindia values('{}', {}, {}, {}, {}, {})".format(state, confirmed, active, recovered, deceased, tested)
+    sql = "insert into covidindia values    ('{}', {}, {}, {}, {}, {})".format(state, confirmed, active, recovered, deceased, tested)
 
     connection = db.connect(user="root", password="", database="utkdb", host="localhost", port="3306")
 
-    cursor = connection.cursor()
+    cursor = connection.cursor() #to write query in database
     cursor.execute(sql)
 
     connection.commit()
