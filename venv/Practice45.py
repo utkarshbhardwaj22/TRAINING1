@@ -7,7 +7,7 @@ class Product:
         self.price = price
 
     def show_product_details(self):
-        print("Name: {}"
+        print("Name: {}\n"
               "Product id: {}\n"
               "Price {}".format(self.name,self.pid,self.price))
 
