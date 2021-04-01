@@ -2,12 +2,8 @@ import pymongo
 print(pymongo.__version__)
 
 #Created connection to MongoDB
-url = "mongodb+srv://dbUtk:utkarsh%4012@cluster0.tgh14.mongodb.net/utkarsh?retryWrites=true&w=majority"
-encoded_url = "mongodb%2Bsrv%3A%2F%2FdbUtk%3Autkarsh%4012%40cluster0.tgh14.mongodb.net%2Futkarsh%3FretryWrites%3Dtrue%26w%3Dmajority.0"
-client = pymongo.MongoClient(encoded_url)
-
-# Obtain reference to the database
-# db = client.utkarsh
+url = "mongodb://dbUtk:utkarsh@cluster0-shard-00-02.tgh14.mongodb.net:27017,cluster0-shard-00-01.tgh14.mongodb.net:27017,cluster0-shard-00-00.tgh14.mongodb.net:27017/utkarsh?ssl=true&replicaSet=atlas-f8rvp5-shard-0&authSource=admin&retryWrites=true&w=majority"
+client = pymongo.MongoClient(url)
 db = client['utkarsh']
 
 #listing the collections
@@ -15,7 +11,7 @@ db = client['utkarsh']
 #print(collections)
 
 collection = db["students"]
-student = {"name": "piyush", "rollno": 14113014, "class": "D4PEA"}
+student = {"name": "piyush", "email": "bhard96piyush@gmail.com", "rollno": 1706902}
 document = collection.insert_one(student)
 print("Documented Inserted: ",document.__inserted_id)
 
